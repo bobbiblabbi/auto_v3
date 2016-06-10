@@ -1,0 +1,7 @@
+{% extends 'base_page.html' %}
+
+{% block content%}
+    {{ person_template.name }} {{ person_template.surname }} {{ person_template.email }}
+    <p><a class="btn btn-primary" href="{% url "save-ready-template" id=person_template.id %}" role="button">Save »</a></p>
+    <p><a class="btn btn-primary" href="{% url "send-email" id=person_template.id %}" role="button">Send email »</a></p>
+{% endblock %}

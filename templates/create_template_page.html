@@ -1,0 +1,13 @@
+{% extends 'base_page.html' %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        вы авторизованы как {{ user.username }}
+    {% endif %}
+
+    <br>Выберите документ
+    <br>введите количество страниц и координаты строк для каждой страницы
+
+
+{% endblock %}

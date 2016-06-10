@@ -1,0 +1,25 @@
+{% extends 'base_page.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        вы авторизованы как {{ user.username }}
+    {% endif %}
+    <footer>
+        <p></p>
+    </footer>
+    {% for one_person in person %}
+            <div class="col-lg-4">
+                <h2>{{ one_person.name }} {{ one_person.surname }}</h2>
+
+                <p>{{ one_person.email }}</p>
+
+                <p><a class="btn btn-primary" href="{% url "template-page" id=one_person.id %}" role="button">Send Mail »</a></p>
+                {% if user.is_staff %}
+                    <a class="btn btn-danger" href="{% url "delete-user" id=one_person.id %}">
+                        Delete »
+                    </a>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+{% endblock %}

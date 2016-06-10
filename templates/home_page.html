@@ -1,0 +1,17 @@
+{% extends 'base_page.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        Вы авторизованы как: {{ user.username }} | {{ user.first_name }} {{ user.last_name }}
+    {% endif %}
+    <footer>
+        <p></p>
+    </footer>
+    <h3>Список документов</h3>
+    {% for document in user_doc %}
+        {{ document.id }} | {{ document.name }} <br>
+
+    {% endfor %}
+    <br>
+    <p><a class="btn btn-primary" href="{% url "get-pages" %}" role="button">Создать шаблон »</a></p>
+{% endblock %}

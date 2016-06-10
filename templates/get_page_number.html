@@ -1,0 +1,93 @@
+{% extends 'base_page.html' %}
+
+{% block content %}
+
+<form action="{% url 'get-pages' %}" method="post">
+    {% csrf_token %}
+    Выберите файл:{{ form.which_file }}
+    Введите количество страниц{{ form.pages }}
+    <br>
+    Страница 1
+    {{ form.coorx1 }}{{ form.coory1 }}{{ form.text1 }}
+    <input type="submit" value="Сохранить">
+</form>
+<br>
+{#<form action="" method="post">#}
+{##}
+{#    Страница 1 <br>#}
+{#    <label for="">координата x1: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y1: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <label for="">координата x2: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y2: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <label for="">координата x3: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y3: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <label for="">координата x4: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y4: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <label for="">координата x5: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y5: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <label for="">координата x6: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y6: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <label for="">координата x7: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y7: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <label for="">координата x8: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y8: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <label for="">координата x9: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y9: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <label for="">координата x10: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">координата y10: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <label for="">текст: </label>#}
+{#    <input id="" type="text" name="" value="">#}
+{#    <br>#}
+{#    <input type="submit" value="OK">#}
+{##}
+{##}
+{##}
+{#</form>#}
+{% endblock %}
